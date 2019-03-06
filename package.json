@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href=/warsawjs-workshop-29-movie/",
+    "predeploy": "ng build --base-href=/warsawjs-workshop-29-movie/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
