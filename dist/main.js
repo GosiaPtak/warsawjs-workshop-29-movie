@@ -524,7 +524,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var API_URL = 'https://gosiaptak.cba.pl/movies.json';
+var API_URL = 'http://gosiaptak.cba.pl/movies.json';
 var API_METHODS = {
     fetchList: API_URL + "/list/:page",
     fetchMovie: API_URL + "/movie/:id"
