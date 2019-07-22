@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
@@ -32,7 +32,7 @@ export interface FetchMovieResponseBody {
   }>;
 }
 
-const API_URL = 'http://vps135320.ovh.net:1234';
+const API_URL = 'http://gosiaptak.cba.pl/movies.json';
 const API_METHODS = {
   fetchList: `${API_URL}/list/:page`,
   fetchMovie: `${API_URL}/movie/:id`
@@ -57,10 +57,11 @@ export class RequestMoviesService {
   }
 
   private makeRequest<T>(url, params = {}): Observable<T> {
+    console.log(2, url);
     Object.entries(params).forEach(([key, value]) => {
       url = url.replace(`:${key}`, value);
+      console.log(1, url);
     });
-
     return this.http.get<T>(url);
   }
 }
