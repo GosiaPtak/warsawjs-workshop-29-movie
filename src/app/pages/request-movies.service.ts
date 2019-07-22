@@ -32,7 +32,7 @@ export interface FetchMovieResponseBody {
   }>;
 }
 
-const API_URL = 'https://gosiaptak.cba.pl/movies.json';
+const API_URL = 'http://gosiaptak.cba.pl/movies.json';
 const API_METHODS = {
   fetchList: `${API_URL}/list/:page`,
   fetchMovie: `${API_URL}/movie/:id`
